@@ -47,7 +47,7 @@ export default function MyProfile() {
 
                     <center>
 
-                        <img className="h-40 w-55 rounded-full" src={`https://mauwebs-backend-social-programmer.onrender.com${userInfo.image}`} alt="" />
+                        <img className="h-40 w-55 rounded-full" src={`http://127.0.0.1:8000${userInfo.image}`} alt="" />
 
                         <br></br>
 

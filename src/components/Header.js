@@ -200,7 +200,7 @@ export default function Header() {
 
                                                     <img
                                                         className="h-10 w-10 rounded-full"
-                                                        src={`https://mauwebs-backend-social-programmer.onrender.com${userInfo.image}`}
+                                                        src={`http://127.0.0.1:8000${userInfo.image}`}
                                                         alt="" />
 
                                                 </Menu.Button>

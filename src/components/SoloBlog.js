@@ -195,7 +195,7 @@ export default function SoloBlog() {
 
                                                             <img
                                                                 className="object-cover w-24 h-24 rounded-full shadow"
-                                                                src={`https://mauwebs-backend-social-programmer.onrender.com${u.image}`}
+                                                                src={`http://127.0.0.1:8000${u.image}`}
                                                                 alt="Persona o empresa" />
 
                                                             <div className="flex flex-col justify-center mt-2">
