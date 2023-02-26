@@ -37,7 +37,7 @@ export const login = (email, password) => async (dispatch) => {
         }
 
         const { data } = await axios.post(
-            'http://127.0.0.1:8000/users/login/',
+            'https://mauwebs-backend-social-programmer.onrender.com/users/login/',
             { 'email': email, 'password': password }, config
         )
 
@@ -78,7 +78,7 @@ export const register = (user_name, email, password) => async (dispatch) => {
         }
 
         const { data } = await axios.post(
-            'http://127.0.0.1:8000/users/register/',
+            'https://mauwebs-backend-social-programmer.onrender.com/users/register/',
             { 'user_name': user_name, 'email': email, 'password': password }, config
         )
 
@@ -123,7 +123,7 @@ export const editUser = (user) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.put(
-            'http://127.0.0.1:8000/users/put/', user, config
+            'https://mauwebs-backend-social-programmer.onrender.com/users/put/', user, config
         )
 
         dispatch({
@@ -166,7 +166,7 @@ export const getSoloUser = (id) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.get(
-            `http://127.0.0.1:8000/users/${id}/`,
+            `https://mauwebs-backend-social-programmer.onrender.com/users/${id}/`,
             config
         )
 
@@ -202,7 +202,7 @@ export const getListUsers = () => async (dispatch, getState) => {
         }
 
         const { data } = await axios.get(
-            `http://127.0.0.1:8000/users/getUsers/`,
+            `https://mauwebs-backend-social-programmer.onrender.com/users/getUsers/`,
             config
         )
 

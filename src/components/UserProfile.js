@@ -56,7 +56,7 @@ export default function UserProfile() {
 
                                     <center>
 
-                                        <img className="h-40 w-55 rounded-full" src={`http://127.0.0.1:8000${user.image}`} alt="" />
+                                        <img className="h-40 w-55 rounded-full" src={`https://mauwebs-backend-social-programmer.onrender.com${user.image}`} alt="" />
 
                                         <br></br>
 

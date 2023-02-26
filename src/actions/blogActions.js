@@ -43,7 +43,7 @@ export const listBlogs = () => async (dispatch, getState) => {
             }
         }
 
-        const { data } = await axios.get(`http://127.0.0.1:8000/blogs/get/`, config);
+        const { data } = await axios.get(`https://mauwebs-backend-social-programmer.onrender.com/blogs/get/`, config);
 
         dispatch({
             type: BLOG_LIST_SUCCESS,
@@ -81,7 +81,7 @@ export const createBlogAction = (body) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.post(
-            `http://127.0.0.1:8000/blogs/post/`,
+            `https://mauwebs-backend-social-programmer.onrender.com/blogs/post/`,
             { 'body': body },
             config
         )
@@ -119,7 +119,7 @@ export const blogActionDetails = (id) => async (dispatch, getState) => {
             }
         }
 
-        const { data } = await axios.get(`http://127.0.0.1:8000/blogs/get/${id}/`, config);
+        const { data } = await axios.get(`https://mauwebs-backend-social-programmer.onrender.com/blogs/get/${id}/`, config);
 
         dispatch({
             type: BLOG_DETAILS_SUCCESS,
@@ -156,7 +156,7 @@ export const createBlogComment = (id, text) => async (dispatch, getState) => {
             }
         }
         const { data } = await axios.post(
-            `http://127.0.0.1:8000/blogs/comment/${id}/`, text, config
+            `https://mauwebs-backend-social-programmer.onrender.com/blogs/comment/${id}/`, text, config
         )
 
         dispatch({
@@ -194,7 +194,7 @@ export const updateBlogAction = (blog) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.put(
-            `http://127.0.0.1:8000/blogs/put/${blog.id}/`, blog, config
+            `https://mauwebs-backend-social-programmer.onrender.com/blogs/put/${blog.id}/`, blog, config
         )
 
         dispatch({
@@ -237,7 +237,7 @@ export const deleteBlogAction = (id) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.delete(
-            `http://127.0.0.1:8000/blogs/delete/${id}`, config
+            `https://mauwebs-backend-social-programmer.onrender.com/blogs/delete/${id}`, config
         )
 
 

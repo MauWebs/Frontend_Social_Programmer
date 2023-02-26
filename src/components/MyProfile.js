@@ -47,7 +47,7 @@ export default function MyProfile() {
 
                     <center>
 
-                        <img className="h-40 w-55 rounded-full" src={`http://127.0.0.1:8000${userInfo.image}`} alt="" />
+                        <img className="h-40 w-55 rounded-full" src={`https://mauwebs-backend-social-programmer.onrender.com${userInfo.image}`} alt="" />
 
                         <br></br>
 
@@ -130,7 +130,7 @@ export default function MyProfile() {
 
                                                 <div className="flex flex-row items-center">
 
-                                                    <img src={`http://127.0.0.1:8000${userInfo.image}`} class="rounded-full" width="40" />
+                                                    <img src={`https://mauwebs-backend-social-programmer.onrender.com${userInfo.image}`} class="rounded-full" width="40" />
 
                                                     <div className="flex flex-row items-center ml-2">
 

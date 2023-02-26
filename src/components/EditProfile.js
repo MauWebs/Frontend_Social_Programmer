@@ -87,7 +87,7 @@ export default function EditProfile() {
                 }
             }
 
-            const { data } = await axios.post('http://127.0.0.1:8000/users/image/', formData, config)
+            const { data } = await axios.post('https://mauwebs-backend-social-programmer.onrender.com/users/image/', formData, config)
 
             setImage(data)
             setUploading(false)
