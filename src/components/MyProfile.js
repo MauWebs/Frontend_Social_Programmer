@@ -130,7 +130,7 @@ export default function MyProfile() {
 
                                                 <div className="flex flex-row items-center">
 
-                                                    <img src={`https://mauwebs-backend-social-programmer.onrender.com${userInfo.image}`} class="rounded-full" width="40" alt="empresa o persona" />
+                                                    <img src={`https://mauwebs-backend-social-programmer.onrender.com${userInfo.image}`} className="rounded-full" width="40" alt="empresa o persona"/>
 
                                                     <div className="flex flex-row items-center ml-2">
 
