@@ -67,11 +67,7 @@ export default function Feed() {
 
                                                                     <div className="flex flex-row items-center ml-2">
 
-                                                                        {user.user_name === user.image &&
-                                                                         
-                                                                         <img src={`https://mauwebs-backend-social-programmer.onrender.com${user.image}`} class="rounded-full" width="40" alt="empresa o persona"/>
-                                                                        
-                                                                        }
+                                                                        <img src={`https://mauwebs-backend-social-programmer.onrender.com${user.image}`} class="rounded-full" width="40" />
 
                                                                         <span className="font-bold mr-1 ml-2">{user.user_name}</span>
 
