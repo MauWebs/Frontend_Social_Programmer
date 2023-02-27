@@ -54,7 +54,7 @@ export default function EditProfile() {
         e.preventDefault()
 
         if (password !== confirmPassword) {
-            setMessage('Passwords must match ')
+            setMessage('¡Las contraseñas deben coincidir!')
         } else {
             dispatch(editUser({
                 'id': user.id,
