@@ -5,6 +5,7 @@ import { AiFillHome, AiFillPlusSquare } from "react-icons/ai";
 import { logout } from '../actions/userActions';
 import { useDispatch, useSelector } from 'react-redux';
 import programador from '../media/programador.png';
+import authenticated_User from '../media/user.png';
 
 
 function classNames(...classes) {
@@ -85,8 +86,8 @@ export default function Header() {
 
                                             <img
                                                 className="h-10 w-10 rounded-full"
-                                                src={`https://mauwebs-backend-social-programmer.onrender.com${userInfo.image}`}
-                                                alt="" />
+                                                src={authenticated_User}
+                                                alt="Persona o empresa" />
 
                                         </Menu.Button>
 
@@ -200,8 +201,8 @@ export default function Header() {
 
                                                     <img
                                                         className="h-10 w-10 rounded-full"
-                                                        src={`https://mauwebs-backend-social-programmer.onrender.com${userInfo.image}`}
-                                                        alt="" />
+                                                        src={authenticated_User}
+                                                        alt="Persona o empresa" />
 
                                                 </Menu.Button>
 

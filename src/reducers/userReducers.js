@@ -25,6 +25,8 @@ import {
     USER_LIST_RESET,
 } from '../constants/userConstants';
 
+//Login
+
 export const userLoginReducer = (state = {}, action) => {
     switch (action.type) {
         case USER_LOGIN_REQUEST:
@@ -43,6 +45,8 @@ export const userLoginReducer = (state = {}, action) => {
             return state
     }
 }
+
+//Register
 
 export const userRegisterReducer = (state = {}, action) => {
     switch (action.type) {
@@ -63,6 +67,8 @@ export const userRegisterReducer = (state = {}, action) => {
     }
 }
 
+//Edit
+
 export const userEditReducer = (state = {}, action) => {
     switch (action.type) {
         case USER_EDIT_REQUEST:
@@ -81,6 +87,8 @@ export const userEditReducer = (state = {}, action) => {
             return state
     }
 }
+
+//Solo User
 
 export const userSoloReducer = (state = { user: {} }, action) => {
     switch (action.type) {
@@ -101,6 +109,7 @@ export const userSoloReducer = (state = { user: {} }, action) => {
     }
 }
 
+//List Users
 
 export const userListReducer = (state = { users: [] }, action) => {
     switch (action.type) {

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getListUsers } from '../actions/userActions';
 import { listBlogs } from '../actions/blogActions';
+import authenticated_User from '../media/user.png';
 
 //Components
 
@@ -67,7 +68,7 @@ export default function Feed() {
 
                                                                     <div className="flex flex-row items-center ml-2">
 
-                                                                        <img src={`https://mauwebs-backend-social-programmer.onrender.com${user.image}`} class="rounded-full" width="40" />
+                                                                        <img src={authenticated_User} class="rounded-full" width="40" />
 
                                                                         <span className="font-bold mr-1 ml-2">{user.user_name}</span>
 

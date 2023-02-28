@@ -8,6 +8,8 @@ import { blogActionDetails, createBlogComment } from '../actions/blogActions';
 
 import { BLOG_CREATE_COMMENT_RESET } from '../constants/blogConstants';
 
+import authenticated_User from '../media/user.png';
+
 //Components
 
 import Messages from './Messages';
@@ -91,7 +93,7 @@ export default function SoloBlog() {
 
                                                                             <div className="flex flex-row items-center ml-2">
 
-                                                                                <img src={`https://mauwebs-backend-social-programmer.onrender.com${user.image}`} class="rounded-full" width="40" />
+                                                                                <img src={authenticated_User} class="rounded-full" width="40" />
 
                                                                                 <span className="font-bold mr-1 ml-2">{blog.user}</span>
 
@@ -195,7 +197,7 @@ export default function SoloBlog() {
 
                                                             <img
                                                                 className="object-cover w-24 h-24 rounded-full shadow"
-                                                                src={`https://mauwebs-backend-social-programmer.onrender.com${u.image}`}
+                                                                src={authenticated_User}
                                                                 alt="Persona o empresa" />
 
                                                             <div className="flex flex-col justify-center mt-2">

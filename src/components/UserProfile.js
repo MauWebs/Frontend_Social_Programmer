@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { getSoloUser } from '../actions/userActions';
 import { listBlogs } from '../actions/blogActions';
+import authenticated_User from '../media/user.png';
 
 //Components
 
@@ -56,7 +57,7 @@ export default function UserProfile() {
 
                                     <center>
 
-                                        <img className="h-40 w-55 rounded-full" src={`https://mauwebs-backend-social-programmer.onrender.com${user.image}`} alt="" />
+                                        <img className="h-40 w-55 rounded-full" src={authenticated_User} alt="persona o empresa" />
 
                                         <br></br>
 
@@ -113,55 +114,55 @@ export default function UserProfile() {
                             </h2>
 
                             {blogs.map((blog) => (
-                              
-                              <>
-                              
+
+                                <>
+
                                     {user.user_name === blog.user &&
 
                                         <div className="py-20 bg-gray-200">
-                              
+
                                             <div className=" px-10">
-                              
+
                                                 <div className="max-w-md mx-auto bg-white shadow-lg rounded-md overflow-hidden md:max-w-md">
-                              
+
                                                     <div className="md:flex">
-                              
+
                                                         <div className="w-full">
-                              
+
                                                             <div key={blog.id} class="flex justify-between items-center m-8">
-                              
+
                                                                 <div className="flex flex-row items-center">
 
-                                                                    <img src={`https://mauwebs-backend-social-programmer.onrender.com${user.image}`} class="rounded-full" width="40" />
-                              
+                                                                    <img src={authenticated_User} class="rounded-full" width="40" />
+
                                                                     <div className="flex flex-row items-center ml-2">
-                              
+
                                                                         <span className="font-bold mr-1">{blog.user}</span>
-                              
+
                                                                     </div>
-                              
+
                                                                 </div>
-                              
+
                                                             </div>
-                              
+
                                                             <div></div>
 
                                                             <div className='p-4 flex justify-between items-center'>
-                                                            
+
                                                                 <p >{blog.body}</p>
-                                                            
+
                                                             </div>
-                                                            
+
                                                             <div class="p-4 flex justify-between items-center">
-                                                            
+
                                                                 <div class="flex flex-row items-center">
-                                                            
+
                                                                     <a
                                                                         href={`/soloblog/${blog.id}`}
                                                                         className="group relative flex  justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                                                                            Ver más
+                                                                        Ver más
                                                                     </a>
-                                                                
+
                                                                 </div>
                                                             </div>
                                                         </div>

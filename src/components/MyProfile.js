@@ -4,6 +4,7 @@ import { AiFillEdit } from "react-icons/ai";
 import { BsFillTrashFill } from "react-icons/bs";
 import { useParams } from 'react-router-dom';
 import { listBlogs, deleteBlogAction } from '../actions/blogActions';
+import authenticated_User from '../media/user.png';
 
 
 export default function MyProfile() {
@@ -31,6 +32,7 @@ export default function MyProfile() {
     }, [dispatch, successDelete])
 
     //Handler
+    
     const deleteHandler = (id) => {
         if (window.confirm('¿Estás seguro de que quieres eliminar este blog?')) {
             dispatch(deleteBlogAction(id))
@@ -47,7 +49,7 @@ export default function MyProfile() {
 
                     <center>
 
-                        <img className="h-40 w-55 rounded-full" src={`https://mauwebs-backend-social-programmer.onrender.com${userInfo.image}`} alt="persona o empresa" />
+                        <img className="h-40 w-55 rounded-full" src={authenticated_User} alt="persona o empresa" />
 
                         <br></br>
 
@@ -126,11 +128,11 @@ export default function MyProfile() {
 
                                         <div className="w-full">
 
-                                            <div key={blog.id} class="flex justify-between items-center m-8">
+                                            <div key={blog.id} className="flex justify-between items-center m-8">
 
                                                 <div className="flex flex-row items-center">
 
-                                                    <img src={`https://mauwebs-backend-social-programmer.onrender.com${userInfo.image}`} class="rounded-full" width="40" alt="persona o empresa"/>
+                                                    <img src={authenticated_User}  className="rounded-full" width="40" alt="persona o empresa"/>
 
                                                     <div className="flex flex-row items-center ml-2">
 
@@ -150,9 +152,9 @@ export default function MyProfile() {
 
                                             </div>
 
-                                            <div class="p-4 flex justify-between items-center">
+                                            <div className="p-4 flex justify-between items-center">
 
-                                                <div class="flex flex-row items-center">
+                                                <div className="flex flex-row items-center">
 
                                                     <a
                                                         href={`/editblog/${blog.id}`}

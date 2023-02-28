@@ -11,6 +11,7 @@ import { USER_EDIT_RESET } from '../constants/userConstants';
 
 export default function EditProfile() {
 
+    //Const
 
     const [user_name, setUserName] = useState('');
     const [email, setEmail] = useState('');
@@ -36,6 +37,7 @@ export default function EditProfile() {
     const userEdit = useSelector(state => state.userEdit);
     const { success } = userEdit;
 
+    //UseEffect
 
     useEffect(() => {
         if (userInfo.id !== user.id) {
@@ -49,6 +51,7 @@ export default function EditProfile() {
         }
     }, [dispatch, user, success, userInfo])
 
+    //Handler
 
     const submitHandler = (e) => {
         e.preventDefault()
@@ -221,6 +224,12 @@ export default function EditProfile() {
 
                                                 </div>
 
+                                                {/*
+
+
+hago esto en el futuro  /   I do this in the future
+
+        
                                                 <form>
 
                                                     <label htmlFor="about" className="block text-sm font-medium text-gray-700">
@@ -229,7 +238,7 @@ export default function EditProfile() {
 
                                                     <input
                                                         type='text'
-                                                        placeholder='Image'
+                                                        placeholder='Imagen'
                                                         value={image}
                                                         onChange={(e) => setImage(e.target.value)}>
                                                     </input>
@@ -241,6 +250,8 @@ export default function EditProfile() {
                                                     </input>
 
                                                 </form>
+
+                                                */}
 
                                             </div>
 

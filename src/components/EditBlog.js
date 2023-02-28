@@ -12,6 +12,7 @@ import Loader from './Loader';
 
 export default function EditBlog() {
 
+    //Const
 
     const { id } = useParams();
 
@@ -28,6 +29,8 @@ export default function EditBlog() {
     const updateBlog = useSelector(state => state.updateBlog);
     const { error, loading, success } = updateBlog;
 
+    //UseEffect
+
     useEffect(() => {
         if (success) {
             dispatch({ type: BLOG_UPDATE_RESET })
@@ -40,6 +43,7 @@ export default function EditBlog() {
         }
     }, [dispatch, blog, id, success])
 
+    //Handler
 
     const submitHandler = (e) => {
         e.preventDefault()
